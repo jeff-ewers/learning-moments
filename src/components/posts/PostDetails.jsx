@@ -28,21 +28,11 @@ export const PostDetails = () => {
         fetchLikes()
     }, [postId])
 
-    // useEffect(() => {
-    //     const fetchPostAuthor = async (userId) => {
-    //         debugger
-    //         const userObj = await getUserById(userId);
-    //         const authorName = toString(userObj.name);
-    //         setAuthor(authorName);
-    //     }
-    //     fetchPostAuthor(postAuthorId)
-    // }, [postAuthorId])
-
     useEffect(() => {
         if (postAuthorId !== undefined) {
             const fetchPostAuthor = async (userId) => {
                 const userObj = await getUserById(userId);
-                const authorName = userObj.name; // No need for toString here
+                const authorName = userObj.name; 
                 setAuthor(authorName);
             }
             fetchPostAuthor(postAuthorId);
@@ -57,6 +47,11 @@ export const PostDetails = () => {
         <div className="post-info">Date: {post?.date}</div>
         <div className="post-info">Likes: {likes}</div>
         <div className="post-info">{post?.body}</div>
+
+
+        {/* TODO: Add buttons depending on user */}
+
+        
     </section>
     </>
 

@@ -16,3 +16,7 @@ export const getTopics = () => {
 export const getPostById = (postId) => {
     return fetch(`http://localhost:8088/posts/${postId}`).then(res => res.json());
 }
+
+export const submitNewPost = (postObj) => {
+console.log("Submitted!");
+}
