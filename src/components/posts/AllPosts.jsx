@@ -43,7 +43,8 @@ export const AllPosts = () => {
         <div className="posts">
             {filterPosts.map(postObj => {
                 
-                return <Posts key={postObj.id} post={postObj} likes={likes.filter((post) => post.postId === postObj.id)} />
+                return  <Posts key={postObj.id} post={postObj} likes={likes.filter((post) => post.postId === postObj.id)} />
+                    
             })}
         </div>
         </>
