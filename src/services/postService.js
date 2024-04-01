@@ -12,3 +12,7 @@ export const getTopics = () => {
     const topics = fetch('http://localhost:8088/topics').then(res => res.json())
     return topics;
 }
+
+export const getPostById = (postId) => {
+    return fetch(`http://localhost:8088/posts/${postId}`).then(res => res.json());
+}
